@@ -1,32 +1,36 @@
-/**
- * Title of Project
- * Author Name
- * 
- * This is a template. You must fill in the title, author, 
- * and this description to match your project!
- */
 
 "use strict";
 
-/**
- * Description of preload
-*/
-function preload() {
+class Animal { // make a class for the Animal 
+    constructor(x,y, image) {
+        this.x = x;
+        this.y = y;
+        this.image = image;
+        this.angle = 0;
+    }
 
+    update() {
+        this.display();
+     }
+
+    display() {
+        push();
+        imageMode(CENTER);
+        translate(this.x, this.y);
+        rotate(this.angle);
+        image(this.image, 0, 0);
+    pop();
+  }
+  overlap(x, y) {
+    if (x > this.x - this.image.width / 2 &&
+      x < this.x + this.image.width / 2 &&
+      y > this.y - this.image.height / 2 &&
+      y < this.y + this.image.height) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }
 
-
-/**
- * Description of setup
-*/
-function setup() {
-
-}
-
-
-/**
- * Description of draw()
-*/
-function draw() {
-
-}
