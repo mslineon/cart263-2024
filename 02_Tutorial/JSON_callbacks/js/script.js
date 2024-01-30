@@ -25,8 +25,6 @@ function draw() {
     text("and so", width/2, height*.55);
     text(meanings, width/2, height*0.6);
     pop();
-
-
 }
 
 function mousePressed() {
