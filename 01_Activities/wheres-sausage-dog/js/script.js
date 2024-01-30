@@ -14,7 +14,6 @@ const SAUSAGE_DOG_IMAGE = `assets/images/animal-images/sausage-dog.png`;
 
 const NUM_ANIMALS = 100; 
 
-
 let animals = [];
 let animalImages = [];
 let animalObjects = [];
@@ -23,7 +22,7 @@ let sausageDog;
 
 function preload() {
     for (let i = 0; i < NUM_ANIMAL_DISPLAY; i++) {
-        let animalImage = loadImage(`${ANIMAL_IMAGE_PREFIX}${i}.png`);
+        let animalImage = loadImage(`${ANIMAL_IMAGE_PREFIX}${i}.png`); // arrays of dog iamges
         animalImages.push(animalImage);
     }
     sausageDogImage = loadImage(`${SAUSAGE_DOG_IMAGE}`);
